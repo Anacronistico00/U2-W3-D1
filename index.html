@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizi G1-S3-U2</title>
+  </head>
+  <body>
+    <div>
+      <h1>Lista animali inseriti</h1>
+
+      <form id="petForm">
+        <ul>
+          <li>
+            <label for="petName">Nome dell'animale</label>
+            <input type="text" id="petName" required />
+          </li>
+          <li>
+            <label for="ownerName">Nome del proprietario</label>
+            <input type="text" id="ownerName" required />
+          </li>
+          <li>
+            <label for="species">Tipo di animale</label>
+            <input type="text" id="species" required />
+          </li>
+          <li>
+            <label for="breed">razza dell'animale</label>
+            <input type="text" id="breed" required />
+          </li>
+        </ul>
+        <button type="submit">Aggiungi Animale</button>
+      </form>
+    </div>
+
+    <div>
+      <h2>Lista animali</h2>
+      <div id="petsList"></div>
+    </div>
+    <script src="assets/js/scriptE1.js"></script>
+    <script src="assets/js/scriptE2.js"></script>
+  </body>
+</html>
