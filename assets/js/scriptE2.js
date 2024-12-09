@@ -30,21 +30,24 @@ petForm.addEventListener('submit', function (e) {
   const newPet = new pet(petName, ownerName, species, breed);
   pets.push(newPet);
 
-  displayPetOnList(newPet);
-
   const sameOwner = pets.some(
     (pet) => pet !== newPet && newPet.hasSameOwner(pet)
   );
+
+  displayPetOnList(newPet, sameOwner);
 
   console.log(sameOwner);
 
   petForm.reset();
 });
 
-function displayPetOnList(pet) {
+function displayPetOnList(pet, sameOwner) {
   const li = document.createElement('li');
   const h3Li = document.createElement('h3');
+  const pLi = document.createElement('p');
   h3Li.textContent = `Nome: ${pet.petName} - Specie: ${pet.species} - Razza: ${pet.breed} - Proprietario: ${pet.ownerName}`;
+  pLi.textContent = `Ha lo stesso proprietario di un altro animale? ${sameOwner}`;
   li.appendChild(h3Li);
+  li.appendChild(pLi);
   petsUl.appendChild(li);
 }
